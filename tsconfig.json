@@ -1,0 +1,32 @@
+{
+    "include": [
+        "./src/**/*",
+    ],
+    "files": [
+        "./src/index.ts"
+    ],
+    "compilerOptions": {
+        "paths": {
+            "src/*": [
+                "./src/*"
+            ],
+            "network/*": [
+                "./src/network/*"
+            ],
+            "assets/*": [
+                "./src/assets/*"
+            ],
+            "utils": [
+                "./src/utils/index.ts"
+            ]
+        },
+        "target": "es5",
+        "outDir": "./dist",
+        "allowJs": true,
+        "alwaysStrict": true,
+        "strict": true,
+        "module": "es2020",
+        "moduleResolution": "node",
+        "suppressImplicitAnyIndexErrors":true,
+    }
+}

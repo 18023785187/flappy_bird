@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunkflappy_bird=self.webpackChunkflappy_bird||[]).push([[392],{2392:function(e,t,l){l.r(t);var a=(0,l(9329).getGameData)(),f=a.context,c=a.w,i=a.h;t.default=function(){f&&(f.fillStyle="rgb(40,44,52)",f.fillRect(0,0,c,i))}}}]);
