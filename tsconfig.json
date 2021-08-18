@@ -20,7 +20,7 @@
                 "./src/utils/index.ts"
             ]
         },
-        "target": "es5",
+        "target": "es6",
         "outDir": "./dist",
         "allowJs": true,
         "alwaysStrict": true,
