@@ -15,6 +15,9 @@ function render_3(): void {
     Explorer.getState('bird').render()
     pipes.forEach(pipe => pipe.render())
     Explorer.getState('scorecard').render()
+    import('../../offCanvas').then(res => {
+        res.replaceCanvas()
+    })
 }
 
 export {

@@ -10,7 +10,7 @@ import { IImages, IAudios } from 'network/typing'
 import { IImageElements } from './typing'
 
 class Game {
-    constructor(el: HTMLCanvasElement) {
+    constructor(el: HTMLCanvasElement, tEl: HTMLCanvasElement) {
         if (Game.init) return
         if (el.tagName !== 'CANVAS')
             throw new Error(`<${el.tagName.toLowerCase()}> is not a <canvas>`)
@@ -22,6 +22,8 @@ class Game {
         this.getWindowWAndH()
         el.width = Game.w
         el.height = Game.h
+        tEl.width = Game.w
+        tEl.height = Game.h
         this.loadData()
 
         createRef(new SceneManage())

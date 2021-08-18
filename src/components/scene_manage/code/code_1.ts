@@ -25,7 +25,9 @@ function render_1(): void {
     Explorer.getState('score').render()
     Explorer.getState('play').render()
     context.drawImage(<HTMLImageElement>images.title, titleDx, titleDy, getSize('title').width, getSize('title').height)
-
+    import('../../offCanvas').then(res => {
+        res.replaceCanvas()
+    })
 }
 
 export {

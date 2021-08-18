@@ -53,6 +53,9 @@ function render_2(): void {
     context.globalAlpha = TutorialState.opacity
     context.drawImage(<HTMLImageElement>images.tutorial, tutorialDx, tutorialDy, getSize('tutorial').width, getSize('tutorial').height)
     context.restore()
+    import('../../offCanvas').then(res => {
+        res.replaceCanvas()
+    })
 }
 
 export {

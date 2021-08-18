@@ -34,6 +34,9 @@ function render_5(): void {
     Explorer.getState('panel').render()
     Explorer.getState('panel').renderMedal()
     Explorer.getState('panel').renderNum()
+    import('../../offCanvas').then(res => {
+        res.replaceCanvas()
+    })
 }
 
 export {

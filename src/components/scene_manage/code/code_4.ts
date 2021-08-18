@@ -37,6 +37,9 @@ function render_4(): void {
         context.drawImage(GameOver.dieImages[GameOver.imagesIndex], bird.x - getSize('die').width / 1.7, bird.B - getSize('die').height, getSize('die').width, getSize('die').height)
     }
     Explorer.getState('scorecard').render()
+    import('../../offCanvas').then(res => {
+        res.replaceCanvas()
+    })
 }
 
 export {
