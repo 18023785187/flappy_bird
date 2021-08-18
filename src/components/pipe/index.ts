@@ -28,9 +28,9 @@ class Pipe {
             h = data.h,
             images = <IElementObj>data.images.pipe
         const landY: number = Explorer.getState('land').y
-        targetH = landY * .78,
-            targetW = landY * (WIDTH / HEIGHT) * .6,
-            targetI = landY * 0.22
+        targetH = Math.floor(landY * .78),
+            targetW = Math.floor(landY * (WIDTH / HEIGHT) * .6),
+            targetI = Math.floor(landY * 0.22)
 
         pipes.push(this)
         record(this)

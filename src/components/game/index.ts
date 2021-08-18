@@ -15,7 +15,7 @@ class Game {
         if (el.tagName !== 'CANVAS')
             throw new Error(`<${el.tagName.toLowerCase()}> is not a <canvas>`)
 
-        Game.el = el
+        Game.el = tEl
         Game.init = true
         Game.context = <CanvasRenderingContext2D>el.getContext('2d')
 

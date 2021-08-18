@@ -105,7 +105,6 @@ class SceneManage {
                     date: formatDate(new Date(), "yyyy-MM-dd hh:mm:ss"),
                     total: getTotal().toString()
                 })
-                totals.length > 10 && (totals.length = 10)
                 totals.sort((a, b) => Number(b.total) - Number(a.total))
                 window.localStorage.setItem('totals', JSON.stringify(totals))
                 window.localStorage.setItem('curTotal', getTotal().toString())

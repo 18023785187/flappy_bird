@@ -2,6 +2,7 @@ import Explorer from "../explorer"
 import { againPlay } from "../audio"
 import { getGameData } from "../game"
 import { IElementObj } from "../game/typing"
+import { requestAnimationFrame } from 'utils'
 
 const WIDTH = 48,
     HEIGHT = 48
@@ -33,8 +34,8 @@ class Bird {
             .forEach(val => this.images.push(val))
         this.fno = 0
         this.x = this.y = w * .2
-        this.upSpeed = parseFloat((h * 0.0006).toFixed(3))
-        this.downSpeed = parseFloat((h * 0.00035).toFixed(3))
+        this.upSpeed = parseFloat((h * 0.0006).toFixed(2))
+        this.downSpeed = parseFloat((h * 0.00035).toFixed(2))
     }
     private images: HTMLImageElement[] = []
     private fno: number
@@ -49,12 +50,14 @@ class Bird {
     public B: number = 0
     public L: number = 0
     public event = (): void => {
-        againPlay('flappy')
-        if (this.fno > 0) {
-            this.isUp = true
-            this.r = 0
-            this.fno = 0
-        }
+        requestAnimationFrame()(() => {
+            againPlay('flappy')
+            if (this.fno > 0) {
+                this.isUp = true
+                this.r = 0
+                this.fno = 0
+            }
+        })
     }
     public update(): void {
         ++this.fno
