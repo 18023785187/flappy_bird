@@ -6,7 +6,7 @@
 
 # demo
 <div>
-     <a herf='https://18023785187.github.io/flappy_bird'>https://18023785187.github.io/flappy_bird</a>
+     <a href='https://18023785187.github.io/flappy_bird'>https://18023785187.github.io/flappy_bird</a>
 </div>
 
 # 目录结构
