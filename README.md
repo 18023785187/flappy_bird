@@ -6,7 +6,7 @@
 
 # demo
 <div>
-     <a href='https://flappy-bird-six.vercel.app/'>https://flappy-bird-six.vercel.app/</a>
+     <a href='https://18023785187.github.io/flappy_bird/'>https://18023785187.github.io/flappy_bird/</a>
 </div>
 
 # 目录结构
